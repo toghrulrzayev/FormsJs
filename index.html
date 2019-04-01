@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body style="background-color:rgb(12, 75, 119,0.1)">
+    <header></header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form name="myForm">
+                        <h3 class="text-center mt-2">Forms List</h3>
+
+                        <label for="inputName" style="font-size:1.5rem;">Name</label>
+                        <input type="text" name="aname" class="form-control" id="inputName" placeholder=" Enter Name">
+
+                        <label for="inputSurname" style="font-size:1.5rem;">Surname</label>
+                        <input type="text" name="sname" class="form-control" id="inputSurname" placeholder="Enter Surname">
+
+                        <label for="inputAge" style="font-size:1.5rem;">Date of Birthday</label>
+                        <input type="text" name="age" class="form-control" id="inputAge" placeholder="Enter Birthday">
+                        <span>Birthday format should be like that: 2015-03-25</span><br>
+
+                        <label for="inputEmail" style="font-size:1.5rem;">E-mail</label>
+                        <input type="text" name="email" class="form-control" id="inputEmail"
+                            placeholder="Enter E-mail">
+
+                        <button type="button" onclick="return validateForm()" id="submit" class="btn btn-block btn-outline-success btn-lg mt-3">Submit</button><br><br>
+                    </form>
+                    <form name="deletListItem">
+                        <h3>Delete user from list</h3>
+                        <input type="text" name="listNumber" class="col-md-3 form-control float-left">
+                        <button type="button" onclick="deleteList()" class="ml-5 btn btn-outline-warning btn-md ">List-Deleted</button>
+
+
+                        <h3>Sort List by</h3>
+                        <button type="button" class="btn btn-outline-info mt-3 btn-lg" onclick="idSort()">Id</button>
+                        <button type="button" class="btn btn-outline-info mt-3 btn-lg " onclick="nameSort()">Name</button>
+                        <button type="button" class="btn btn-outline-info mt-3 btn-lg " onclick="surnameSort()">SurName</button>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-12 mt-4">
+                            <div id="personList"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer></footer>
+    <script src="Js/script.js"></script>
+</body>
+
+</html>
